@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9C4EC95C-DA54-41AA-9066-6557C5AEE57E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Choices</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7E75FA3202D27032864D0B2A2C8898C481C53171</key>
+		<string>https://github.com/jjbing1201/Choices.git</string>
+		<key>7F250EAC096400B5F70294B778E334ECAD85FA56</key>
+		<string>https://github.com/jjbing1201/zFramework.git</string>
+		<key>E78F696C33CFDB1CDDBD3AC99C8A5ACB462A946D</key>
+		<string>https://github.com/jjbing1201/UnitHelper.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Choices.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7E75FA3202D27032864D0B2A2C8898C481C53171</key>
+		<string>../..</string>
+		<key>7F250EAC096400B5F70294B778E334ECAD85FA56</key>
+		<string>../../../zFramework</string>
+		<key>E78F696C33CFDB1CDDBD3AC99C8A5ACB462A946D</key>
+		<string>../../../UnitHelper</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jjbing1201/Choices.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7E75FA3202D27032864D0B2A2C8898C481C53171</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7E75FA3202D27032864D0B2A2C8898C481C53171</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Choices</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E78F696C33CFDB1CDDBD3AC99C8A5ACB462A946D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UnitHelper</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7F250EAC096400B5F70294B778E334ECAD85FA56</string>
+			<key>IDESourceControlWCCName</key>
+			<string>zFramework</string>
+		</dict>
+	</array>
+</dict>
+</plist>
