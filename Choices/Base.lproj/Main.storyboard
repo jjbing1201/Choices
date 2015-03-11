@@ -7,7 +7,7 @@
         <!--Launch Controller-->
         <scene sceneID="N4r-FX-ntN">
             <objects>
-                <viewController id="cnA-3u-LM2" customClass="LaunchController" customModule="Choices" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchController" id="cnA-3u-LM2" customClass="LaunchController" customModule="Choices" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kLt-fL-RZZ"/>
                         <viewControllerLayoutGuide type="bottom" id="xr1-T3-bV7"/>
@@ -15,12 +15,83 @@
                     <view key="view" contentMode="scaleToFill" id="RYD-Qu-dNK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5cF-PJ-lfv">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUd-zG-swF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cnA-3u-LM2" id="wNB-XI-00Y"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6tf-tJ-Ph9">
+                                <rect key="frame" x="250" y="538" width="100" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Dwy-PE-sy9"/>
+                                </constraints>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imu-2y-1UB">
+                                <rect key="frame" x="225" y="250" width="150" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="fc5-Os-ATR"/>
+                                    <constraint firstAttribute="height" constant="100" id="hmx-Fn-S5V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="欢迎来到《抉择》">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="UserClickFirstTime:" destination="cnA-3u-LM2" eventType="touchUpInside" id="F5c-yg-9Oy"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ulG-JX-p83">
+                                <rect key="frame" x="281" y="470" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="imu-2y-1UB" secondAttribute="centerY" id="7nb-OS-egt"/>
+                            <constraint firstAttribute="centerX" secondItem="imu-2y-1UB" secondAttribute="centerX" id="BSN-zU-pRE"/>
+                            <constraint firstItem="xr1-T3-bV7" firstAttribute="top" secondItem="6tf-tJ-Ph9" secondAttribute="bottom" constant="25" id="JNI-2A-tZt"/>
+                            <constraint firstItem="tUd-zG-swF" firstAttribute="leading" secondItem="RYD-Qu-dNK" secondAttribute="leading" id="Lf7-yJ-pGM"/>
+                            <constraint firstAttribute="bottom" secondItem="tUd-zG-swF" secondAttribute="bottom" id="UHd-EE-NzJ"/>
+                            <constraint firstItem="ulG-JX-p83" firstAttribute="top" secondItem="imu-2y-1UB" secondAttribute="bottom" constant="120" id="Ypq-Lj-xdB"/>
+                            <constraint firstItem="tUd-zG-swF" firstAttribute="top" secondItem="RYD-Qu-dNK" secondAttribute="top" id="baq-ay-S3h"/>
+                            <constraint firstAttribute="trailing" secondItem="tUd-zG-swF" secondAttribute="trailing" id="mSb-dU-dDm"/>
+                            <constraint firstAttribute="centerX" secondItem="ulG-JX-p83" secondAttribute="centerX" id="vrV-gD-GcA"/>
+                            <constraint firstAttribute="centerX" secondItem="6tf-tJ-Ph9" secondAttribute="centerX" id="yQc-cd-P03"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Welcome" destination="imu-2y-1UB" id="aLe-ts-Ysm"/>
+                        <outlet property="WelcomeIndicator" destination="ulG-JX-p83" id="MOe-AW-xDD"/>
+                        <outlet property="imageCanvas" destination="tUd-zG-swF" id="oJG-XM-ucM"/>
+                        <outlet property="imagePage" destination="6tf-tJ-Ph9" id="pVc-HH-Sut"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vvv-ML-9dZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="492"/>
+            <point key="canvasLocation" x="418" y="491"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="jN1-Jx-b7H">
+            <objects>
+                <viewController storyboardIdentifier="LoginController" id="t3a-Vk-kxy" customClass="LoginController" customModule="Choices" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mUk-Sj-A63"/>
+                        <viewControllerLayoutGuide type="bottom" id="u9f-gE-KEs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="acf-As-aik">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dF8-56-b98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1085" y="491"/>
         </scene>
     </scenes>
 </document>

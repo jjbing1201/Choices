@@ -10,6 +10,8 @@ import UIKit
 
 class LaunchRouter: BaseRouter {
     
+    var loginRouter: LoginRouter?
+    
     override func configureControllerStyle() {
         super.configureControllerStyle()
     }
@@ -23,4 +25,7 @@ class LaunchRouter: BaseRouter {
         self.configureControllerStyle()
     }
 
+    func presentToLoginController() {
+        loginRouter?.presentViewControllerFromViewController(self.controller!)
+    }
 }

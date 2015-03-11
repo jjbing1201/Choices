@@ -95,6 +95,10 @@
 		9A2AA0041AB03DC800AE4010 /* LaunchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AA0031AB03DC800AE4010 /* LaunchHandler.swift */; };
 		9A2AA0061AB03DCC00AE4010 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AA0051AB03DCC00AE4010 /* LaunchController.swift */; };
 		9A2AA0081AB03E0D00AE4010 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2AA0071AB03E0D00AE4010 /* libz.dylib */; };
+		9A2AA00A1AB04B0400AE4010 /* IMG_0195_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A2AA0091AB04B0400AE4010 /* IMG_0195_6.png */; };
+		9A2AA00D1AB0669300AE4010 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AA00C1AB0669300AE4010 /* LoginRouter.swift */; };
+		9A2AA00F1AB0669F00AE4010 /* LoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AA00E1AB0669F00AE4010 /* LoginHandler.swift */; };
+		9A2AA0111AB066AB00AE4010 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AA0101AB066AB00AE4010 /* LoginController.swift */; };
 		9AA460871AB017060020A636 /* Choices.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9AA460851AB017060020A636 /* Choices.xcdatamodeld */; };
 		9AA4608C1AB017060020A636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA4608A1AB017060020A636 /* Main.storyboard */; };
 		9AA4608E1AB017060020A636 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AA4608D1AB017060020A636 /* Images.xcassets */; };
@@ -206,6 +210,10 @@
 		9A2AA0031AB03DC800AE4010 /* LaunchHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchHandler.swift; sourceTree = "<group>"; };
 		9A2AA0051AB03DCC00AE4010 /* LaunchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
 		9A2AA0071AB03E0D00AE4010 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9A2AA0091AB04B0400AE4010 /* IMG_0195_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_0195_6.png; path = "../../code/素材/米帮3.0/IMG_0195_6.png"; sourceTree = "<group>"; };
+		9A2AA00C1AB0669300AE4010 /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRouter.swift; path = src/LoginRouter.swift; sourceTree = "<group>"; };
+		9A2AA00E1AB0669F00AE4010 /* LoginHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHandler.swift; sourceTree = "<group>"; };
+		9A2AA0101AB066AB00AE4010 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		9AA4607E1AB017060020A636 /* Choices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Choices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA460821AB017060020A636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AA460861AB017060020A636 /* Choices.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Choices.xcdatamodel; sourceTree = "<group>"; };
@@ -273,6 +281,7 @@
 		9A2A9F431AB03C0D00AE4010 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9A2AA00B1AB0668100AE4010 /* Login */,
 				9A2A9F3C1AB03BED00AE4010 /* Launch */,
 			);
 			name = Main;
@@ -595,10 +604,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9A2AA00B1AB0668100AE4010 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9A2AA00C1AB0669300AE4010 /* LoginRouter.swift */,
+				9A2AA00E1AB0669F00AE4010 /* LoginHandler.swift */,
+				9A2AA0101AB066AB00AE4010 /* LoginController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		9AA460751AB017060020A636 = {
 			isa = PBXGroup;
 			children = (
 				9A2AA0071AB03E0D00AE4010 /* libz.dylib */,
+				9A2AA0091AB04B0400AE4010 /* IMG_0195_6.png */,
 				9AA460801AB017060020A636 /* Choices */,
 				9AA4607F1AB017060020A636 /* Products */,
 			);
@@ -615,12 +635,12 @@
 		9AA460801AB017060020A636 /* Choices */ = {
 			isa = PBXGroup;
 			children = (
-				9A2A9F6A1AB03CE100AE4010 /* Libs */,
+				9AA460A71AB0178D0020A636 /* AppGlobal */,
+				9A1B8E8F1AB03B5E0013815A /* Store */,
 				9A2A9F471AB03C5300AE4010 /* Network */,
 				9A2A9F441AB03C2F00AE4010 /* Model */,
 				9A2A9F3B1AB03BE400AE4010 /* Units */,
-				9A1B8E8F1AB03B5E0013815A /* Store */,
-				9AA460A71AB0178D0020A636 /* AppGlobal */,
+				9A2A9F6A1AB03CE100AE4010 /* Libs */,
 				9AA460811AB017060020A636 /* Supporting Files */,
 			);
 			path = Choices;
@@ -717,6 +737,7 @@
 				9A1B8E881AB03B1F0013815A /* Localizable.strings in Resources */,
 				9A1B8E871AB03B1F0013815A /* InfoPlist.strings in Resources */,
 				9A1B8E8D1AB03B330013815A /* AppColors.plist in Resources */,
+				9A2AA00A1AB04B0400AE4010 /* IMG_0195_6.png in Resources */,
 				9AA4608E1AB017060020A636 /* Images.xcassets in Resources */,
 				9A2A9FE11AB03CEF00AE4010 /* arrow.png in Resources */,
 			);
@@ -729,6 +750,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A2AA00D1AB0669300AE4010 /* LoginRouter.swift in Sources */,
 				9A2A9F5C1AB03CA600AE4010 /* BaseRequest.swift in Sources */,
 				9A2A9FE01AB03CEF00AE4010 /* HttpPack.m in Sources */,
 				9A1B8E7C1AB03A470013815A /* AppDependency.swift in Sources */,
@@ -752,6 +774,7 @@
 				9A2A9FCF1AB03CEF00AE4010 /* NSDataHelper.swift in Sources */,
 				9A2A9FEC1AB03CEF00AE4010 /* STKCoreFoundationDataSource.m in Sources */,
 				9A2A9F5F1AB03CA600AE4010 /* ResponseData.swift in Sources */,
+				9A2AA00F1AB0669F00AE4010 /* LoginHandler.swift in Sources */,
 				9A1B8E7A1AB03A470013815A /* AppConfig.swift in Sources */,
 				9A2A9FDD1AB03CEF00AE4010 /* BaseTools.m in Sources */,
 				9A2A9F461AB03C3C00AE4010 /* BaseModel.swift in Sources */,
@@ -806,6 +829,7 @@
 				9A2A9FFC1AB03CEF00AE4010 /* uibuttonHelper.swift in Sources */,
 				9A2A9FF71AB03CEF00AE4010 /* AppMediaManager.swift in Sources */,
 				9A2AA0061AB03DCC00AE4010 /* LaunchController.swift in Sources */,
+				9A2AA0111AB066AB00AE4010 /* LoginController.swift in Sources */,
 				9A2A9F5E1AB03CA600AE4010 /* HttpHandler.swift in Sources */,
 				9A2A9FD11AB03CEF00AE4010 /* sizeHelper.swift in Sources */,
 				9A2A9F411AB03C0100AE4010 /* BaseRouter.swift in Sources */,

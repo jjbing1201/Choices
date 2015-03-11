@@ -15,11 +15,17 @@ let HttpHandlerSharedInstance:HttpHandler = HttpHandler()
 
 // MARK: - 全局常量
 let lUUIDKey = "uuid"
+let lNewUser = "NewUser"
 let lRespDataKey = "RespData"
 let lStoreKeyAppRecord = "AppRecord"
 let lStoreBaseModel: String = "BaseModel"
 
-// MARK: - 全局变量
+// MARK: - 所有storyboard和xib
+let lStoryboardMain = "Main"
+
+// MARK: - 全局所有名称
+let lLaunchViewControllerIdentifier = "LaunchController"
+let lLoginControllerIdentifier = "LoginController"
 
 // MARK: - 全局枚举
 

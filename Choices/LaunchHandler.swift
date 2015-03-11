@@ -18,6 +18,19 @@ class LaunchHandler: BaseHandler {
         TaskListInstance.doGetConnectWithServer()
     }
     
+    func presentToLoginController() {
+        (self.router as LaunchRouter).presentToLoginController()
+    }
+    
+    func launchCountdown() {//正常启动 手动登录
+        
+        var launchTime = UInt64(AppConfig.globalConfig.launchTime)
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC * launchTime)), dispatch_get_main_queue()) {
+            (self.router as LaunchRouter).presentToLoginController()
+        }
+    }
+
+    
     override func networkCallback(n: NSNotification) {
         let resp = n.userInfo![lRespData] as BaseResponse
         if resp.reqID == RequestID.RemoteConnected { // 推荐精选

@@ -23,10 +23,16 @@ class AppDependency: NSObject {
 
     private func configureDependencies() {
         
+        var loginRouter   = LoginRouter()
+        var loginHandler  = LoginHandler()
+        loginRouter.handler = loginHandler
+        loginHandler.router = loginRouter
+        
         var launchRouter  = LaunchRouter()
         var launchHandler = LaunchHandler()
         launchRouter.handler = launchHandler
         launchHandler.router = launchRouter
+        launchRouter.loginRouter = loginRouter
         
         rooter = launchRouter
     }
